@@ -27,7 +27,7 @@ Mobile view
 ## Links
 
 - Solution URL: [Code](https://github.com/Web-dev-rafik/skilled-e-learning-landing-page)
-- Live Site URL: [Live Site]()
+- Live Site URL: [Live Site](https://web-dev-rafik.github.io/skilled-e-learning-landing-page/)
 
 ## Built with
 
