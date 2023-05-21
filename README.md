@@ -22,11 +22,11 @@ Users should be able to:
 
 Mobile view
 
-![]()
+![](https://github.com/Web-dev-rafik/skilled-e-learning-landing-page/blob/main/screenshot.png)
 
 ## Links
 
-- Solution URL: [Code]()
+- Solution URL: [Code](https://github.com/Web-dev-rafik/skilled-e-learning-landing-page)
 - Live Site URL: [Live Site]()
 
 ## Built with
