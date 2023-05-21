@@ -1,0 +1,287 @@
+/* Reset */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+/* Colors variables */
+
+:root {
+  /* Colors */
+  --Dark-blue: #13183f;
+  --Pink: #f7457d;
+  --Orange: rgb(255, 111, 71);
+  --Blue: rgb(71, 81, 255);
+  --Grey: #84879a;
+  --White: #fff;
+
+  /* Gradients */
+  --Orange-Pink-grad: linear-gradient(
+    rgb(255, 111, 71) 0%,
+    rgb(240, 40, 167) 100%
+  );
+  --Blue-Pink-grad: linear-gradient(rgb(71, 81, 255), #f7457d);
+}
+
+/* Typography */
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 100%; /* 16px by default */
+}
+
+:root {
+  --fs: 1rem;
+  --fs-h1: 2.5rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.25rem;
+}
+
+/* Desktop : 992px */
+@media (min-width: 62em) {
+  :root {
+    --fs: 1.125rem;
+    --fs-h1: 3.5rem;
+    --fs-h2: 1.6875rem;
+    --fs-h3: 1.40625rem;
+  }
+}
+
+/* General styles */
+
+.paragraph {
+  font-size: var(--fs);
+  font-weight: 500;
+  color: var(--Grey);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  color: var(--Dark-blue);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  color: var(--Dark-blue);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  color: var(--Dark-blue);
+}
+
+.logo {
+  max-width: 5.625rem;
+}
+
+.btn {
+  font-size: 1rem;
+  color: var(--White);
+  font-weight: 700;
+  padding: 0.75em 1.5rem;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.75;
+}
+
+.wrapper {
+  padding: 1rem 1rem 0 1rem;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-btn {
+  background-color: var(--Dark-blue);
+}
+
+/* Hero */
+
+.hero {
+  margin-top: 2rem;
+}
+
+.hero-desc {
+  margin-top: 1rem;
+}
+
+.hero-btn {
+  background: var(--Orange-Pink-grad);
+  transform: scale(1.125);
+  margin-top: 2rem;
+}
+
+/* Courses */
+
+.courses {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.courses-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.courses-list li {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem 1.5rem;
+  padding-top: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.courses-heading {
+  background: var(--Orange-Pink-grad);
+  border-radius: 0.5em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.courses-heading h2 {
+  color: var(--White);
+}
+
+.courses-icon {
+  max-width: 3.5rem;
+  position: absolute;
+  left: 1.75rem;
+  top: -1.75rem;
+}
+
+.courses-desc {
+  margin-top: 1rem;
+}
+
+.courses-link {
+  width: fit-content;
+  color: var(--Pink);
+  font-size: calc(var(--fs) * 1.15);
+  font-weight: 700;
+  display: block;
+  margin-top: 1rem;
+}
+
+.courses-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--Pink);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--Dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.footer-btn {
+  background: var(--Blue-Pink-grad);
+}
+
+/* Media Queries */
+
+/* Tablets : 544px */
+@media (min-width: 34em) {
+  .wrapper {
+    overflow: hidden;
+  }
+  /* Hero */
+  .hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .hero-img-container {
+    min-width: 40%;
+    z-index: -1;
+    position: relative;
+  }
+  .hero-img {
+    position: absolute;
+    width: 44rem;
+    transform: translate(-10%, -30%);
+  }
+
+  /* Courses */
+
+  .courses {
+    margin-top: 14rem;
+  }
+
+  .courses-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 1rem;
+  }
+}
+
+/* Desktop : 992px */
+@media (min-width: 62em) {
+  .wrapper {
+    max-width: 90em;
+    margin: 0 auto;
+  }
+  .btn {
+    transform: scale(1.2);
+  }
+  .hero-img-container {
+    min-width: 60%;
+  }
+  .hero-img {
+    transform: scale(1.2) translate(20%, -30%);
+  }
+  .courses {
+    margin-top: 10rem;
+  }
+  .courses-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    padding: 2rem 6rem;
+  }
+}
